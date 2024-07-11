@@ -1,3 +1,13 @@
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%; /* Position the submenu to the right */
+  margin-top: -1px; /* Align with parent menu */
+}
+
 .icon-button {
   background-color: #f0f0f0;
   border: none;

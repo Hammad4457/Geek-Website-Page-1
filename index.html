@@ -4,60 +4,185 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      />
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="stylesheet" href="style.css">
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>Geek Page 1</title>
   </head>
-  <body>
-    <header class="container-fluid">
+
+  <body style="background-color: #f1f5f9">
+    <header class="container-fluid" style="background-color: white">
       <nav class="navbar navbar-expand-lg">
-      <div class=" container-fluid">
-  
         <a class="navbar-brand" href="#">
-          <img src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg" alt="Logo" />
+          <img
+            src="https://geeks-react.netlify.app/static/media/logo.e22c846d87ff5a1252df471397badc6d.svg"
+            alt="Logo"
+          />
         </a>
-       
-  
-        <div class="navbar-left d-flex align-items-center ms-3 order-lg-2" style=" width: auto; ;">
-          <div class="" style="border-radius: 50%; background-color: #e3e6ea;  width: 40px; height: 40px; align-items: center; justify-content:center; align-content: center;;">
-           <span style="justify-content: center; display: flex; align-items: center;  justify-items: center;"> <i style="color: black;" class="fa-solid fa-sun"></i>
-           </span> </div>
-          
-          <button  type="button" class="icon-button btn rounded-circle" style="background-color: #e3e6ea; margin-left: 1%; width: 50px;"><i class="fa-regular fa-bell"></i>
-          </button>
-          
-          <div class="popover">
-            <ul>
-              <li>Noti 1</li>
-              <li>Noti 2</li>
-              <li>Noti 3</li>
-            </ul>
+        <div
+          class="navbar-left d-flex align-items-center ms-3 order-lg-2"
+          style="width: auto"
+        >
+          <div
+            style="
+              border-radius: 50%;
+              background-color: #e3e6ea;
+              width: 40px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <i style="color: black; " class="fa-solid fa-sun" ></i>
           </div>
-          
-          
-          <img style="width: 45px;height: 45px; margin-left: 1%; " src="Avatar.jpg" class="rounded-circle" alt="User Avatar">
-           
-            <button  class="navbar-toggler rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            type="button"
+            class="icon-button btn rounded-circle"
+            data-bs-html="true"
+            data-bs-toggle="popover"
+            data-bs-placement="top"
+            data-bs-trigger="hover"
+            id="popoverButton"
+            data-bs-content="<div>Notification 1 </div><hr><div>Notification 2</div><hr><div>Notification 3</div>"
+          >
+            <i class="fa-regular fa-bell"></i>
+          </button>
+
+          <div>
+            <button
+              style="border: none; background-color: white"
+              class="avatar-button"
+              id="avatarPopover"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover"
+              data-bs-html="true"
+              data-bs-content='
+           <div class="">
+             <div class="d-flex">
+               <div  style="width: 10px; border: 1px solid; display: flex;">
+                <div class="rounded-circle" style="width-10px; ;" >
+                  <img  src="Avatar.jpg" alt="">
+                </div>
+                 
+                 <div style="border: 1px solid; left: 0;">
+                   <dt style="color: black;">Annette Black</dt>
+                   <dd style="color: gray;">annette@geeksui.com</dd>
+                 </div>
+               </div>
+               
+             </div>
+             <hr>
+             <span>
+             <p style="margin-left:10px;"><i class="fa-regular fa-user" style="padding-right: 10%; width:"></i>Profile</p></span>
+             <p><i class="fa-regular fa-star"></i>Description</p>
+             <p><i class="fa-solid fa-gear"></i>Settings</p>
+             <hr>
+             <p><i class="fa-solid fa-power-off"></i>Sign Out</p>
+           </div>
+       </div>
+       '
+            >
+              <img
+                style="width: 45px; height: 45px"
+                src="https://geeks-react.netlify.app/static/media/avatar-1.d2fd9642fd3628734b27.jpg"
+                class="rounded-circle"
+                alt="User Avatar"
+              />
+            </button>
+          </div>
+
+          <button
+            class="navbar-toggler rounded"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-  
         <div class="collapse navbar-collapse order-lg-1" id="navbarNav">
-          <ul class="navbar-nav me-auto" >
+          <ul class="navbar-nav me-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Browse</a>
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                id="navbarDropdown"
+                data-bs-toggle="dropdown"
+                >Browse</a
+              >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#"
+                    >Web Development</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Bootstrap</a></li>
+                    <li><a class="dropdown-item" href="#">React</a></li>
+                    <li><a class="dropdown-item" href="#">GraphQL</a></li>
+                    <li><a class="dropdown-item" href="#">Gatsby</a></li>
+                    <li><a class="dropdown-item" href="#">Grunt</a></li>
+                    <li><a class="dropdown-item" href="#">Svelte</a></li>
+                    <li><a class="dropdown-item" href="#">Meteor</a></li>
+                    <li><a class="dropdown-item" href="#">HTML 5</a></li>
+                    <li><a class="dropdown-item" href="#">Andular</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item dropdown-toggle" href="#">Design</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Graphic Design</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Illustrator</a></li>
+                    <li><a class="dropdown-item" href="#">UX/UI Design</a></li>
+                    <li><a class="dropdown-item" href="#">Figma Design</a></li>
+                    <li><a class="dropdown-item" href="#">Adobe XD</a></li>
+                    <li><a class="dropdown-item" href="#">Sketch</a></li>
+                    <li><a class="dropdown-item" href="#">Icon Design</a></li>
+                    <li><a class="dropdown-item" href="#">Photoshop</a></li>
+                  </ul>
+                </li>
                 <li><a class="dropdown-item" href="#">Mobile App</a></li>
                 <li><a class="dropdown-item" href="#">IT Software</a></li>
                 <li><a class="dropdown-item" href="#">Marketing</a></li>
@@ -67,8 +192,15 @@
                 <li><a class="dropdown-item" href="#">Photography</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown">Landings</a>
+            <hr>
+            
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+                >Landings</a
+              >
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Landings</a></li>
                 <li><a class="dropdown-item" href="#">Education</a></li>
@@ -81,13 +213,23 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Pages</a
+              >
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Courses</a></li>
                 <li><a class="dropdown-item" href="#">Path</a></li>
                 <li><a class="dropdown-item" href="#">Blogs</a></li>
                 <li><a class="dropdown-item" href="#">Career</a></li>
-                <li><a class="dropdown-item" href="#">Portfolio <span class="badge bg-primary">New</span></a></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Portfolio <span class="badge bg-primary">New</span></a
+                  >
+                </li>
                 <li><a class="dropdown-item" href="#">Job</a></li>
                 <li><a class="dropdown-item" href="#">Speciality</a></li>
                 <hr />
@@ -99,7 +241,13 @@
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Accounts</a>
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Accounts</a
+              >
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Accounts</a></li>
                 <li><a class="dropdown-item" href="#">Instructor</a></li>
@@ -118,317 +266,1440 @@
                 <li><a class="dropdown-item" href="#">Linked Accounts</a></li>
               </ul>
             </li>
-  
-            <li class="nav-item dropdown"><a class="nav-link dropdown" href="#" href="#"><svg
-                  xmlns="http://www.w3.org/2000/svg" style=" margin-left: 8px; " width="16" height="16"
-                  fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
-                  <path
-                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
-                </svg>
-                <ul class="dropdown-menu ">
-                  <li><a class="dropdown-item">Courses</a></li>
-                  <li><a class="dropdown-item">Path</a></li>
-                </ul>
+
+            <li>
+              <button
+                class="btn"
+                data-bs-html="true"
+                data-bs-toggle="popover"
+                data-bs-placement="top"
+                data-bs-trigger="hover"
+                data-bs-content='
+            <div class="options-popover">
+              <div class="popover-body">
+                <a href="#" style="text-decoration: none;">
+                  <i class="fas fa-book me-2"></i> Documentations
+                </a>
+              </div>
+              <hr>
+              <div class="popover-body">
+                <a href="#" style="text-decoration: none;">
+                  <i class="fas fa-file-alt me-2"></i> Change log
+                </a>
+              </div>
+            </div>
+            '
+              >
+                <img src="options.svg" alt="Options" />
+              </button>
             </li>
-            </a></li>
-            <form class="d-flex" style="width: auto;margin-top:1% ;">
-              <i style="position: absolute; padding: 10px 5px;" class="fas fa-search"></i>
-              <input class="rounded" style="padding-left: 15%;"  type="search" placeholder="Search Courses">
-            </form>
-  
+
+            <link
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+            />
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+            <script>
+              var popoverTriggerList = [].slice.call(
+                document.querySelectorAll('[data-bs-toggle="popover"]')
+              );
+              var popoverList = popoverTriggerList.map(function (
+                popoverTriggerEl
+              ) {
+                return new bootstrap.Popover(popoverTriggerEl);
+              });
+            </script>
+
+            <!-- Initialize popovers -->
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                var popoverTriggerList = [].slice.call(
+                  document.querySelectorAll('[data-bs-toggle="popover"]')
+                );
+                var popoverList = popoverTriggerList.map(function (
+                  popoverTriggerEl
+                ) {
+                  return new bootstrap.Popover(popoverTriggerEl);
+                });
+              });
+            </script>
+
+<form class="search-bar d-flex" style="position: relative;" action="">
+  <span><i style="margin-top: 4%;margin-left: 2% ;position: absolute;" class="fas fa-search"></i></span>
+  <input class="form-control" type="text" placeholder="Search Courses" id="search-bar-field" style="padding-left: 30px;"></input>
+</form>
           </ul>
-        
-        </div>  
-  
-  
-      </div>
+        </div>
       </nav>
     </header>
-    
-    <div class="img-container row" style="background-color: #754FFE; height: auto;;">
-      <div class="col-md-12 col-lg-6 " style="background-color: #754FFE;">
+
+    <!-- Bootstrap JS and dependencies -->
+
+    <script>
+      // Custom JavaScript to handle nested dropdowns
+      document
+        .querySelectorAll(".dropdown-submenu > a")
+        .forEach(function (element) {
+          element.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const submenu = element.nextElementSibling;
+            submenu.classList.toggle("show");
+          });
+        });
+    </script>
+
+    <div
+      class="img-container row"
+      style="background-color: #754ffe; height: auto"
+    >
+      <div class="col-md-12 col-lg-6" style="background-color: #754ffe">
         <h1 class="heading1">Welcome to Geeks UI Learning Application</h1>
-        <p class="para1" >Hand-picked instructor and expertly crafted courses designed for the modren students and enterpreneur.</p>
-        <div class="button1" >
-        <button class="button1-btn1 btn btn-dark" >Browse Courses</button>
-        <button class="button1-btn2 btn btn-light" style="margin-left:  1%;" >Are you instructor?</button>
+        <p class="para1">
+          Hand-picked instructor and expertly crafted courses designed for the
+          modren students and enterpreneur.
+        </p>
+        <div class="button1">
+          <button class="button1-btn1 btn btn-dark">Browse Courses</button>
+          <button class="button1-btn2 btn btn-light" style="margin-left: 1%">
+            Are you instructor?
+          </button>
         </div>
       </div>
-      <div class="col-md-12 col-lg-6  " style="background-color: #754FFE; justify-content: center; display: flex; margin-top: 4%;">
-        <img style="max-width: 100%; height: auto;" src="main image.png">
+      <div
+        class="col-md-12 col-lg-6"
+        style="
+          background-color: #754ffe;
+          justify-content: center;
+          display: flex;
+          margin-top: 4%;
+        "
+      >
+        <img style="max-width: 100%; height: auto" src="main image.png" />
       </div>
     </div>
     <div class="container-fluid">
-      <div class="container-fluid row" style="margin-bottom: 3%;" >
-        <div class="col-sm-6 col-md-6 col-lg-4  d-flex">
-          <div class="box1-icon" >
-            <i class="fa fa-clock-o" style="padding: 18px;" aria-hidden="true"></i>
+      <div class="container-fluid row" style="margin-bottom: 3%">
+        <div class="col-sm-6 col-md-6 col-lg-4 d-flex">
+          <div class="box1-icon">
+            <i
+              class="fa fa-clock-o"
+              style="padding: 18px"
+              aria-hidden="true"
+            ></i>
           </div>
-          <div class="box1-content" >
-            <h4 style="font-weight: 600; font-size: 16px;font-family: Arial,  sans-serif">30,000 online courses</h4>
-            <dd style="font-size: 14px; color: grey;font-family: Arial,  sans-serif">Enjoy a variety of fresh topics</dd>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4 d-flex ">
-          <div class="box2-icon" >
-            <i class="fa fa-video-camera" style="padding: 18px;" aria-hidden="true"></i>
-          </div>
-          <div class="box2-content" >
-            <h4 style="font-weight: 600; font-size: 16px;font-family: Arial,  sans-serif ">Expert instruction</h4>
-            <dd style="font-size: 14px;color: grey;font-family: Arial,  sans-serif">Find the right instructor for you</dd>
+          <div class="box1-content">
+            <h4
+              style="
+                font-weight: 600;
+                font-size: 16px;
+                font-family: Arial, sans-serif;
+              "
+            >
+              30,000 online courses
+            </h4>
+            <dd
+              style="
+                font-size: 14px;
+                color: grey;
+                font-family: Arial, sans-serif;
+              "
+            >
+              Enjoy a variety of fresh topics
+            </dd>
           </div>
         </div>
         <div class="col-md-6 col-lg-4 d-flex">
-          <div class="box3-icon" >
-            <i class="fa-solid fa-user" style="padding: 18px;" aria-hidden="true"></i>
+          <div class="box2-icon">
+            <i
+              class="fa fa-video-camera"
+              style="padding: 18px"
+              aria-hidden="true"
+            ></i>
           </div>
-          <div class="box3-content" >
-            <h4 style="font-weight: 600; font-size: 16px;font-family: Arial,  sans-serif">Lifetime acess</h4>
-            <dd style="font-size: 14px;color: grey;font-family: Arial,  sans-serif">Learn your schedule</dd>
+          <div class="box2-content">
+            <h4
+              style="
+                font-weight: 600;
+                font-size: 16px;
+                font-family: Arial, sans-serif;
+              "
+            >
+              Expert instruction
+            </h4>
+            <dd
+              style="
+                font-size: 14px;
+                color: grey;
+                font-family: Arial, sans-serif;
+              "
+            >
+              Find the right instructor for you
+            </dd>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="box3-icon">
+            <i
+              class="fa-solid fa-user"
+              style="padding: 18px"
+              aria-hidden="true"
+            ></i>
+          </div>
+          <div class="box3-content">
+            <h4
+              style="
+                font-weight: 600;
+                font-size: 16px;
+                font-family: Arial, sans-serif;
+              "
+            >
+              Lifetime acess
+            </h4>
+            <dd
+              style="
+                font-size: 14px;
+                color: grey;
+                font-family: Arial, sans-serif;
+              "
+            >
+              Learn your schedule
+            </dd>
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid cards-container-1" style="background-color: #F1F5F9;">
-    <br>
-    <br>
-    <h3 style="padding-left: 7%;">Recommended to you</h3>
-    <br>
+    <div
+      class="container-fluid cards-container-1"
+      style="background-color: #f1f5f9"
+    >
+      <br />
+      <br />
+      <h3 style="padding-left: 7%">Recommended to you</h3>
+      <br />
 
-    <div id="course-card" class="carousel slide course-carousel" data-bs-ride="carousel">
+      <div
+        id="course-card"
+        class="carousel slide course-carousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div
+              class="row"
+              style="padding-left: 7%; padding-right: 7%; margin-bottom: 8%"
+            >
+              <!--Active Card 01 -->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="graph.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      GraphQL: Introduction to graphQL for beginners
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 2h 40m
+                        </p>
 
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <div class="row" style="padding-left: 7%;padding-right: 7%;margin-bottom: 8%;">
-
-            <!--Active Card 01 -->
-            <div class="col-sm-6 col-md-6 col-lg-3 card-container" style="margin-top: 2%;" >
-              <div class="card card-style">
-                <img class="card-image-top card-image-style" src="graph.jpg"
-                  alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
-
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Advance</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
-
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Advance
+                        </p>
                       </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$550</b>
+                        <span class="text-decoration-line-through">$600</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Brooklyn Simmons
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Active Card 02 -->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="javascript.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      A Complete Beginner’s Guide to JS Course
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 4h 10m
+                        </p>
+
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Advance
+                        </p>
+                      </div>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$700</b>
+                        <span class="text-decoration-line-through">$850</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Jenny Wilson
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Active Card 03 -->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="node.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Beginning Node.js, Express & MongoDB Development
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 2h 00m
+                        </p>
+
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Intermediate
+                        </p>
+                      </div>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$800</b>
+                        <span class="text-decoration-line-through">$950</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-3.d3ce7f20113e7d124501.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Sina Ray
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Active Card 04-->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="laravel.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Laravel: The Ultimate Beginner’s Guide to Learn Laravel
+                      Step by Step
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 1h 00m
+                        </p>
+
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Advance
+                        </p>
+                      </div>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$170</b>
+                        <span class="text-decoration-line-through">$220</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Sobo Rikhan
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!--Active Card 02 -->
-            <div class="col-sm-6 col-md-6 col-lg-3 card-container " style="margin-top: 2%;">
-              <div class="card card-style">
-                <img class="card-image-top card-image-style" src="javascript.jpg" alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">A Complete Beginner’s Guide to JS Course</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 4h 10m</p>
+          <!-- Inactive COursel Items -->
 
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Advance</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$700</b> <span class="text-decoration-line-through">$850</span></p>
+          <div class="carousel-item">
+            <div class="row" style="padding-left: 7%; padding-right: 7%">
+              <!--Active Card 01 -->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="graph.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      GraphQL: Introduction to graphQL for beginners
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 2h 40m
+                        </p>
 
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Advance
+                        </p>
                       </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Jenny Wilson</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$550</b>
+                        <span class="text-decoration-line-through">$600</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Brooklyn Simmons
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!--Active Card 03 -->
-            <div class="col-sm-6 col-md-6 col-lg-3 card-container" style="margin-top: 2%;">
-              <div class="card card-style ">
-                <img class="card-image-top card-image-style" src="node.jpg" alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">Beginning Node.js, Express & MongoDB Development</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 00m</p>
+              <!--Active Card 02 -->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="javascript.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      A Complete Beginner’s Guide to Js Course
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 4h 10m
+                        </p>
 
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Intermediate</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$800</b> <span class="text-decoration-line-through">$950</span></p>
-
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-3.d3ce7f20113e7d124501.jpg" alt="">
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Advance
+                        </p>
                       </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sina Ray</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$700</b>
+                        <span class="text-decoration-line-through">$850</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Jenny Wilson
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Active Card 04-->
-            <div class="col-sm-6 col-md-6 col-lg-3 card-container" style="margin-top: 2%;">
+              <!--Active Card 03 -->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="node.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Beginning Node.js, Express & MongoDB Development
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 2h 00m
+                        </p>
 
-              <div class="card card-style" >
-                <img class="card-image-top card-image-style" src="laravel.jpg" alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">Laravel: The Ultimate Beginner’s Guide to Learn Laravel Step by Step</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 1h 00m</p>
-
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Advance</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$170</b> <span class="text-decoration-line-through">$220</span></p>
-
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-9.ce9a73de84b5e2cc414c.jpg" alt="">
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Intermediate
+                        </p>
                       </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sobo Rikhan</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$800</b>
+                        <span class="text-decoration-line-through">$950</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-3.d3ce7f20113e7d124501.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Sina Ray
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Active Card 04-->
+              <div
+                class="col-sm-6 col-md-6 col-lg-3 card-container"
+                style="margin-top: 2%"
+              >
+                <div class="card card-style">
+                  <img
+                    class="card-image-top card-image-style"
+                    src="laravel.jpg"
+                    alt="Card Image"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Laravel: The Ultimate Beginner’s Guide to Learn Laravel
+                      Step by Step
+                    </h6>
+                    <div class="card-text">
+                      <div class="d-flex">
+                        <p style="color: gray">
+                          <i class="far fa-clock me-1"></i> 1h 00m
+                        </p>
+
+                        <p style="padding-left: 2%; color: gray">
+                          <svg
+                            class="me-1 mt-n1"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              x="3"
+                              y="8"
+                              width="2"
+                              height="6"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="7"
+                              y="5"
+                              width="2"
+                              height="9"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect>
+                            <rect
+                              x="11"
+                              y="2"
+                              width="2"
+                              height="12"
+                              rx="1"
+                              fill="#754FFE"
+                            ></rect></svg
+                          >Advance
+                        </p>
+                      </div>
+                      <p>
+                        <span class="text-warning me-1 mb-1"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          ><svg
+                            viewBox="0 0 24 24"
+                            role="presentation"
+                            style="width: 0.92rem; height: 0.92rem"
+                          >
+                            <path
+                              d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                              style="fill: currentcolor"
+                            ></path></svg
+                          >2.5</span
+                        >
+                        <small style="color: gray">(1500)</small>
+                      </p>
+                      <p>
+                        <b>$170</b>
+                        <span class="text-decoration-line-through">$220</span>
+                      </p>
+
+                      <hr />
+                      <div class="d-flex" style="width: 100%">
+                        <div style="width: 15%">
+                          <img
+                            style="width: 100%"
+                            class="card-avatar rounded-circle"
+                            src="https://geeks-react.netlify.app/static/media/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p
+                          style="
+                            padding-left: 2%;
+                            color: gray;
+                            align-content: center;
+                            width: 80%;
+                          "
+                        >
+                          Sobo Rikhan
+                        </p>
+                        <div
+                          style="
+                            align-items: right;
+                            align-content: right;
+                            width: 5%;
+                          "
+                        >
+                          <i
+                            class="fa-regular fa-bookmark"
+                            style="color: #754ffe"
+                          ></i>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -438,272 +1709,46 @@
           </div>
         </div>
 
-        <!-- Inactive COursel Items -->
+        <button
+          class="carousel-control-prev"
+          data-bs-target="#course-card"
+          type="button"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon icon1"></span>
+        </button>
 
-        <div class="carousel-item ">
-          <div class="row" style="padding-left: 7%;padding-right: 7%;">
-
-            <!--Active Card 01 -->
-            <div class="col-sm-6 col-md-6 col-lg-3 col-lg-3 card-container" style="margin-top: 2%;">
-              <div class="card card-style">
-                <img class="card-image-top card-image-style" src="graph.jpg"
-                  alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">GraphQL: Introduction to graphQL for beginners</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 40m</p>
-
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Advance</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$550</b> <span class="text-decoration-line-through">$600</span></p>
-
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
-                      </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Brooklyn Simmons</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Active Card 02 -->
-            <div class="col-sm-6 col-md-6 col-lg-3 card-container" style="margin-top: 2%;">
-              <div class="card card-style">
-                <img class="card-image-top card-image-style" src="javascript.jpg" alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">A Complete Beginner’s Guide to Js Course</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 4h 10m</p>
-
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Advance</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$700</b> <span class="text-decoration-line-through">$850</span></p>
-
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-6.3905522d6589ed6dfcf0.jpg" alt="">
-                      </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Jenny Wilson</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!--Active Card 03 -->
-            <div class="col-sm-6 col-md-6 col-lg-3 card-container" style="margin-top: 2%;">
-              <div class="card card-style ">
-                <img class="card-image-top card-image-style" src="node.jpg" alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">Beginning Node.js, Express & MongoDB Development</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 2h 00m</p>
-
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Intermediate</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$800</b> <span class="text-decoration-line-through">$950</span></p>
-
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-3.d3ce7f20113e7d124501.jpg" alt="">
-                      </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sina Ray</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Active Card 04-->
-            <div class="col-sm-6 col-md-6 col-lg-3 card-container" style="margin-top: 2%;">
-
-              <div class="card card-style" >
-                <img class="card-image-top card-image-style" src="laravel.jpg" alt="Card Image">
-                <div class="card-body">
-                  <h6 class="card-title">Laravel: The Ultimate Beginner’s Guide to Learn Laravel Step by Step</h6>
-                  <div class="card-text">
-                    <div class="d-flex">
-                      <p style="color: gray;"> <i class="far fa-clock me-1"></i> 1h 00m</p>
-
-                      <p style="padding-left: 2%; color: gray;"> <svg class="me-1 mt-n1" width="16" height="16"
-                          viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                          <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                          <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                        </svg>Advance</p>
-                    </div>
-                    <p><span class="text-warning me-1 mb-1"><svg viewBox="0 0 24 24" role="presentation"
-                          style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.4V6.1L13.71,10.13L18.09,10.5L14.77,13.39L15.76,17.67M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg><svg viewBox="0 0 24 24" role="presentation" style="width: 0.92rem; height: 0.92rem;">
-                          <path
-                            d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
-                            style="fill: currentcolor;"></path>
-                        </svg>2.5</span>
-                      <small style="color: gray;">(1500)</small>
-                    </p>
-                    <p><b>$170</b> <span class="text-decoration-line-through">$220</span></p>
-
-                    <hr>
-                    <div class="d-flex" style="width: 100%;">
-                      <div style="width: 15%;">
-                        <img style="width: 100%;" class="card-avatar rounded-circle" src="https://geeks-react.netlify.app/static/media/avatar-9.ce9a73de84b5e2cc414c.jpg" alt="">
-                      </div>
-                      <p style="padding-left: 2%; color: gray; align-content: center; width: 80%;">Sobo Rikhan</p>
-                      <div style="align-items: right; align-content: right; width: 5%;">
-                        <i class="fa-regular fa-bookmark" style="color: #754ffe;"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <button
+          class="carousel-control-next"
+          data-bs-target="#course-card"
+          type="button"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon icon2"></span>
+        </button>
       </div>
-
-      <button   class="carousel-control-prev" data-bs-target="#course-card" type="button" data-bs-slide="prev">
-        <span  class="carousel-control-prev-icon icon1"></span>
-      </button>
-
-      <button   class="carousel-control-next " data-bs-target="#course-card" type="button" data-bs-slide="next">
-        <span  class="carousel-control-next-icon icon2"></span>
-      </button> 
     </div>
-    </div>
-    
-    <footer class=" py-3">
+
+    <footer class="py-3">
       <div class="container">
-        <hr>
-          <div class="row">
-              <div class="col-sm-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center mb-3 mb-md-0">
-                  <dd class="mb-0">@ 2024 Geeks. All Rights Reserved.</dd>
-              </div>
-              <div class="col-sm-12 col-md-8 d-flex justify-content-center justify-content-md-end flex-wrap">
-                  <a class="footer-link" href="#">Privacy</a>
-                  <a style="padding-left: 4%;" class="footer-link" href="#">Terms</a>
-                  <a style="padding-left: 4%;" class="footer-link" href="#">Feedback</a>
-                  <a style="padding-left: 4%;" class="footer-link" href="#">Support</a>
-              </div>
+        <hr />
+        <div class="row">
+          <div
+            class="col-sm-12 col-md-4 d-flex justify-content-center justify-content-md-start align-items-center mb-3 mb-md-0"
+          >
+            <dd class="mb-0">@ 2024 Geeks. All Rights Reserved.</dd>
           </div>
+          <div
+            class="col-sm-12 col-md-8 d-flex justify-content-center justify-content-md-end flex-wrap"
+          >
+            <a class="footer-link" href="#">Privacy</a>
+            <a style="padding-left: 4%" class="footer-link" href="#">Terms</a>
+            <a style="padding-left: 4%" class="footer-link" href="#"
+              >Feedback</a
+            >
+            <a style="padding-left: 4%" class="footer-link" href="#">Support</a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
